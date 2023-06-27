@@ -44,8 +44,7 @@ if (intval($row['user']) != intval($_SESSION['id'])) {
         }
 
         .chat-messages {
-            overflow-y: scroll;
-            padding: 10px;
+            overflow-y: auto;
             flex: 1 1 auto;
         }
 
@@ -54,9 +53,7 @@ if (intval($row['user']) != intval($_SESSION['id'])) {
         }
 
         .message {
-            margin: 5px;
-            padding: 10px;
-            border-radius: 8px;
+            padding: 15px;
         }
 
         .user-message {
@@ -66,7 +63,6 @@ if (intval($row['user']) != intval($_SESSION['id'])) {
 
         .bot-message {
             background-color: #ddd;
-            text-align: left;
         }
 
         .user-input {
@@ -105,9 +101,7 @@ if (intval($row['user']) != intval($_SESSION['id'])) {
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            margin-bottom: 10px;
             padding: 10px;
-            border-radius: 8px;
             background-color: #ddd;
         }
 
