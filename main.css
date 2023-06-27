@@ -87,7 +87,7 @@ h6 {
     color: white;
 }
 
-input {
+input, select {
     color: #0073ff;
     caret-color: #0073ff;
     text-decoration: none;

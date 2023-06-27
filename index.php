@@ -59,11 +59,22 @@ else:
         <span class="spacer"></span>
         <a href="logout.php" class="navbtn" ripple>Logout</a>
     </div>
+    <?php
+    $res = $conn->query("SELECT * FROM chat WHERE user = " . intval($_SESSION['id']));
+    if (mysqli_num_rows($res) == 0):
+    ?>
+    <div class="hero">
+        <h1>Welcome to PersonaChat!</h1>
+        <h2>You don't seem to have any conversations yet.</h2>
+        <a href="new.php" class="button" ripple>Start Chatting</a>
+    </div>
+    <?php
+    else:
+    ?>
     <div class="main">
         <h1>Conversations</h1>
-        <a href="new.php" class="button">+ New Chat</a>
+        <a href="new.php" class="button" ripple>+ New Chat</a>
         <?php
-        $res = $conn->query("SELECT * FROM chat WHERE user = " . intval($_SESSION['id']));
         while ($row = mysqli_fetch_assoc($res)):
         ?>
         <a href="chat.php?id=<?=intval($row['id'])?>" class="conversation" ripple><?=htmlspecialchars($row['title'])?></a>
@@ -71,6 +82,9 @@ else:
         endwhile;
         ?>
     </div>
+    <?php
+    endif;
+    ?>
     <div class="footer">
         <p>&copy; 2023 PersonaChat. All rights reserved. PersonaChat is an <a href="https://github.com/personachat/PersonaChat" target="_blank">open-sourced project</a>!</p>
     </div>

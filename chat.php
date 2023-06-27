@@ -134,6 +134,8 @@ if (intval($row['user']) != intval($_SESSION['id'])) {
     <div class="header">
         <a href="./" class="navbtn" ripple>Back</a>
         <span class="spacer"></span>
+        <a href="javascript:void(0)" class="navbtn" ripple onclick="if (confirm('Delete chat?')) {window.location.href='deletechat.php?id=<?=$id?>'}">Delete Chat</a>
+        <span class="spacer"></span>
         <span class="title"><?=htmlspecialchars($row['title'])?></span>
     </div>
         <div class="chat-container">
@@ -240,7 +242,7 @@ The following is the conversation:
                         console.error('Error:', error);
                     });
             }
-
+            chatMessages.scrollTop = chatMessages.scrollHeight;
             function addMessage(message, sender) {
                 const chatContainer = document.createElement('div');
                 chatContainer.classList.add('chat');
@@ -320,8 +322,5 @@ The following is the conversation:
             alert('Chat context reset.');
         }
     </script>
-    <div class="footer">
-        <p>&copy; 2023 PersonaChat. All rights reserved. PersonaChat is an <a href="https://github.com/personachat/PersonaChat" target="_blank">open-sourced project</a>!</p>
-    </div>
 </body>
 </html>
