@@ -1,5 +1,9 @@
 # PersonaChat webUI
-The new GUI for PersonaChat
+
+# Notice
+PersonaChat is still in beta and should not be used in production. If you like this project or want further development, **please star this repository.** The authors of this project also work on many other projects, so stars will prompt us to continue working on this project.
+
+The new GUI for PersonaChat that you can run in your browser.
 
 ## Usage
 
