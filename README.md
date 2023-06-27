@@ -1,15 +1,29 @@
 # PersonaChat webUI
 
+A basic webUI for PersonaChat, based on the original (deprecated) webUI.
+
+## Major Differences from Old UI
+
+ * Written in PHP rather than Python
+ * Supports authentication (login)
+ * Supports chat history
+ * Uses a server-side proxy so you can expose the PHP side without exposing the inference API by setting the API to 127.0.0.1.
+
 # Notice
 PersonaChat is still in beta and should not be used in production. If you like this project or want further development, **please star this repository (and the [main repository](https://github.com/personachat/PersonaChat)).** The authors of this project also work on many other projects, so stars will prompt us to continue working on this project.
 
 ## Screenshots
 
 Landing Page
+
 <img width="500" alt="pchat_home" src="https://github.com/personachat/webui/assets/76186054/a667bea5-1f16-4842-befe-f01039eb8bc1">
+
 Dashboard
+
 <img width="500" alt="pchat_dash" src="https://github.com/personachat/webui/assets/76186054/a189344d-735e-4616-922a-1199d5646bb4">
+
 Chat UI
+
 <img width="500" alt="pchat_chat" src="https://github.com/personachat/webui/assets/76186054/5f49584c-65ce-4c57-90c3-a6d16ff9fba5">
 
 ## Usage
