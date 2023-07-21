@@ -1,3 +1,5 @@
+Further development has been [moved to Codeberg](https://codeberg.org/personachat/webui).
+
 # PersonaChat webUI
 
 A basic webUI for PersonaChat, based on the original (deprecated) webUI.
